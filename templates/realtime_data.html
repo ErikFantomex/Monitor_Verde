@@ -1,0 +1,25 @@
+<!-- realtime_data.html -->
+{% extends "base.html" %}
+{% block content %}
+  <h1>Datos en tiempo real</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Marca de tiempo</th>
+        <th>Temperatura (°C)</th>
+        <th>Humedad del suelo</th>
+        <th>Intesidad de luz</th>
+        <!-- Add more headers as needed -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ latest_data.timestamp }}</td>
+        <td>{{ latest_data.temperature }}</td>
+        <td>{{ latest_data.soil_moisture }}</td>
+        <td>{{ latest_data.light_intesity }}</td>
+        <!-- Add more fields as needed -->
+      </tr>
+    </tbody>
+  </table>
+{% endblock %}
